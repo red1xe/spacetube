@@ -26,9 +26,9 @@ class NasaApi {
         var response = await http.get(Uri.parse(url));
         if (response.statusCode == 200) {
           var data = json.decode(response.body);
-          data = data['collection']['items'];
+          var alldata = data['collection']['items'];
           List<NasaModel> nasaData = [];
-          for (var item in data) {
+          for (var item in alldata) {
             nasaData.add(NasaModel.fromJsonSearch(item));
           }
           return nasaData;
@@ -63,15 +63,14 @@ class NasaApi {
     }
   }
 
-  static Future<String> getAudio(String query) async {
+  static Future<List> getAudio(String query) async {
     var url = query;
     Uri uri = Uri.parse(url);
     var response = await http.get(uri);
     if (response.statusCode == 200) {
       var data = json.decode(response.body);
-      var mp3Links = groupmp3links(data);
-      print('MP3 LINK: ${mp3Links}');
-      return mp3Links[0];
+      data = groupmp3links(data);
+      return data;
     } else {
       throw Exception('Failed to load data');
     }

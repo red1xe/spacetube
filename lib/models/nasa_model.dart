@@ -46,6 +46,9 @@ class NasaModel {
       center: json['data'][0]['center'] == null
           ? "Unknown Center"
           : json['data'][0]['center'],
+      nasaId: json['data'][0]['nasa_id'] == null
+          ? "Unknown Nasa ID"
+          : json['data'][0]['nasa_id'],
     );
   }
   factory NasaModel.fromJsonSearch(Map<String, dynamic> json) {

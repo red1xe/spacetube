@@ -1,19 +1,27 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
+
 import 'package:spacetube/apis/nasa_lib_api.dart';
 import 'package:spacetube/func/random.dart';
 import 'package:spacetube/models/nasa_model.dart';
 import 'package:spacetube/pages/image_details_page.dart';
 
 class GalleryView extends StatelessWidget {
-  const GalleryView({super.key});
+  final double height;
+  final double width;
+
+  const GalleryView({
+    Key? key,
+    required this.height,
+    required this.width,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final height = MediaQuery.of(context).size.height;
-    final width = MediaQuery.of(context).size.width;
     return FutureBuilder(
       future: NasaApi.getNasaData(
-          query: recommendations[getRandomInt(recommendations.length)]),
+          query: recommendations[getRandomInt(recommendations.length)],
+          media_type: 'image'),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.done) {
           final random = getRandomInt(snapshot.data!.length - 2);
@@ -150,9 +158,7 @@ class GalleryView extends StatelessWidget {
           );
         } else {
           return const Center(
-            child: CircularProgressIndicator(
-              color: Colors.white,
-            ),
+            child: CircularProgressIndicator(),
           );
         }
       },

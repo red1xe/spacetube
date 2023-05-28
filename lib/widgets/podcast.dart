@@ -1,6 +1,7 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 import 'package:just_audio/just_audio.dart';
+import 'package:spacetube/animation/rotation.dart';
 import 'package:spacetube/func/remove_string.dart';
 
 class MediaMetaData extends StatelessWidget {
@@ -27,7 +28,7 @@ class MediaMetaData extends StatelessWidget {
       children: [
         DecoratedBox(
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(50),
+            shape: BoxShape.circle,
             boxShadow: const [
               BoxShadow(
                 color: Colors.black,
@@ -38,14 +39,10 @@ class MediaMetaData extends StatelessWidget {
             ],
           ),
           child: ClipRRect(
-            borderRadius: BorderRadius.circular(10),
-            child: Image.network(
-              imageurl!,
-              height: 300,
-              width: 300,
-              fit: BoxFit.cover,
-            ),
-          ),
+              borderRadius: BorderRadius.circular(50),
+              child: Rotation(
+                imageurl: imageurl,
+              )),
         ),
         const SizedBox(height: 20),
         Text(

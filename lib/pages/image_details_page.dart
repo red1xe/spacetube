@@ -1,9 +1,7 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
-
 import 'package:spacetube/apis/nasa_lib_api.dart';
 import 'package:spacetube/func/remove_string.dart';
-
 import '../func/keywordChips.dart';
 
 class ImagePage extends StatelessWidget {

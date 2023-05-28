@@ -42,23 +42,18 @@ class PodcastPage extends StatefulWidget {
 
 class _PodcastPageState extends State<PodcastPage> {
   late AudioPlayer _audioPlayer;
-  String url = '';
-  late var getUrl = NasaApi.getAudio(widget.url!).then((value) {
-    setState(() {
-      url = value;
-    });
-  });
+
   late var _playlist = ConcatenatingAudioSource(
     children: [
       AudioSource.uri(
-        Uri.parse(url),
+        Uri.parse(widget.url!),
         tag: MediaItem(
           id: 'id',
           album: widget.center!,
           title: widget.title!,
           artist: removelast(widget.date!),
           artUri: Uri.parse(
-              'https://cdn-icons-png.flaticon.com/512/831/831299.png'),
+              'https://cdn-icons-png.flaticon.com/512/3921/3921633.png'),
         ),
       ),
     ],
@@ -119,7 +114,7 @@ class _PodcastPageState extends State<PodcastPage> {
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
             colors: [
-              Color.fromARGB(73, 109, 68, 255),
+              Color(0xff2c5fd8),
               Color(0xff191A22),
             ],
           ),

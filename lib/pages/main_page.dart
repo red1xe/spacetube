@@ -4,6 +4,8 @@ import 'package:spacetube/pages/podcast_page.dart';
 import 'package:spacetube/widgets/gallery.dart';
 
 import 'package:provider/provider.dart';
+import 'package:spacetube/widgets/shorts.dart';
+import 'package:spacetube/widgets/thumbnail.dart';
 
 import '../provider/search_provider.dart';
 import '../widgets/chips.dart';
@@ -14,6 +16,8 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final height = MediaQuery.of(context).size.height;
+    final width = MediaQuery.of(context).size.width;
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(
@@ -27,14 +31,33 @@ class HomePage extends StatelessWidget {
                 const SizedBox(
                   height: 10,
                 ),
-                IconButton(
-                    onPressed: () {
-                      Navigator.pushNamed(context, '/podcast');
-                    },
-                    icon: Icon(
-                      Icons.music_note_rounded,
-                      color: Colors.white,
-                    )),
+                const Thumbnail(),
+                const SizedBox(
+                  height: 10,
+                ),
+                galleryWidget(
+                  width: width,
+                  height: height,
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                const Thumbnail(),
+                const SizedBox(
+                  height: 10,
+                ),
+                const Thumbnail(),
+                const SizedBox(
+                  height: 10,
+                ),
+                galleryWidget(
+                  width: width,
+                  height: height,
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                const Shorts()
               ],
             )),
       ),
@@ -74,7 +97,7 @@ class galleryWidget extends StatelessWidget {
                 ],
               ),
             ),
-            const GalleryView(),
+            GalleryView(height: height, width: width),
           ],
         ),
       ],
