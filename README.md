@@ -5,9 +5,15 @@ SpaceTube is a Flutter app that utilizes the NASA API to provide users with acce
 ## Screenshots
 
 <div align="center">
-  <img src="screenshots/Screenshot_1685257437.png" alt="Screenshot 1" width="300" style="margin-right: 20px">
-  <img src="screenshots/Screenshot_1685257443.png" alt="Screenshot 2" width="300" style="margin-right: 20px">
-  <img src="screenshots/Screenshot_1685257464.png" alt="Screenshot 3" width="300">
+  <img src="screenshots/Screenshot_1685257443.png" width="300" style="margin-right: 20px">
+  <img src="screenshots/Screenshot_1685257464.png" width="300" style="margin-right: 20px">
+  <img src="screenshots/Screenshot_1685257469.png" width="300" style="margin-right: 20px">
+  <img src="screenshots/Screenshot_1685257484.png" width="300" style="margin-right: 20px">
+  <img src="screenshots/Screenshot_1685257489.png" width="300" style="margin-right: 20px">
+  <img src="screenshots/Screenshot_1685257514.png" width="300" style="margin-right: 20px">
+  <img src="screenshots/Screenshot_1685257992.png" width="300" style="margin-right: 20px">
+  <img src="screenshots/Screenshot_1685257996.png" width="300" style="margin-right: 20px">
+  <img src="screenshots/Screenshot_1685258015.png" width="300" style="margin-right: 20px">
 </div>
 
 ## Fatures
