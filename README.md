@@ -4,9 +4,9 @@ SpaceTube is a Flutter app that utilizes the NASA API to provide users with acce
 
 ## Screenshots
 
-![Screenshot 1 - Image Gallery](screenshots/Screenshot_1685257437.png)
-![Screenshot 2 - Video Player](screenshots/Screenshot_1685257443.png)
-![Screenshot 3 - Podcast Streaming](screenshots/Screenshot_1685257464.png)
+<img src="screenshots/Screenshot_1685257437.png" width="300">
+<img src="screenshots/Screenshot_1685257443.png"  width="300">
+<img src="screenshots/Screenshot_1685257464.png" width="300">
 
 ## Fatures
 
